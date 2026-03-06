@@ -1,0 +1,78 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: 'Outfit', 'DM Sans', system-ui, sans-serif;
+  --color-primary: #0f766e;
+  --color-primary-light: #14b8a6;
+  --color-accent: #f59e0b;
+  --color-glass: rgba(255, 255, 255, 0.08);
+  --color-glass-border: rgba(255, 255, 255, 0.12);
+  --color-dark-bg: #0c0f14;
+  --color-dark-surface: #141922;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Outfit', 'DM Sans', system-ui, sans-serif;
+  background: var(--color-dark-bg);
+  color: #e2e8f0;
+  overflow-x: hidden;
+}
+
+body.light {
+  background: #f8fafc;
+  color: #1e293b;
+}
+
+/* Glassmorphism */
+.glass {
+  background: rgba(255, 255, 255, 0.06);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+body.light .glass {
+  background: rgba(255, 255, 255, 0.7);
+  border: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+/* Gradient text */
+.gradient-text {
+  background: linear-gradient(135deg, #14b8a6 0%, #0d9488 50%, #0f766e 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Scroll progress bar */
+.scroll-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 3px;
+  background: linear-gradient(90deg, #14b8a6, #0d9488);
+  z-index: 9999;
+  transform-origin: left;
+}
+
+/* Swiper overrides */
+.swiper-pagination-bullet-active {
+  background: #14b8a6 !important;
+  transform: scale(1.2);
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  color: #14b8a6 !important;
+}
+
+body.light .text-white {
+  color: #0f172a;
+}
+body.light h1, body.light h2, body.light h3 {
+  color: #0f172a;
+}
