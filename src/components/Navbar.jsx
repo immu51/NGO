@@ -4,6 +4,7 @@ import { motion, AnimatePresence } from 'framer-motion'
 import { HiMenu, HiX, HiMoon, HiSun } from 'react-icons/hi'
 import { useDarkMode } from '../hooks/useDarkMode'
 import DonateButton from './DonateButton'
+import logo from '../assets/logo.svg'
 
 const navLinks = [
   { to: '/', label: 'Home' },
@@ -29,8 +30,11 @@ export default function Navbar() {
       >
         <nav className="glass mx-4 mt-4 rounded-2xl px-6 py-4 md:mx-8 md:px-8">
           <div className="flex items-center justify-between">
-            <Link to="/" className="text-xl font-bold tracking-tight gradient-text">
-              Hope Foundation
+            <Link to="/" className="flex items-center gap-2.5">
+              <img src={logo} alt="Hope Foundation" className="h-9 w-9 shrink-0 md:h-10 md:w-10" />
+              <span className="text-xl font-bold tracking-tight gradient-text">
+                Hope Foundation
+              </span>
             </Link>
 
             <div className="hidden items-center gap-8 md:flex">

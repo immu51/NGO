@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
 import { FaFacebookF, FaTwitter, FaInstagram, FaLinkedinIn } from 'react-icons/fa'
 import { HiMail, HiPhone, HiLocationMarker } from 'react-icons/hi'
+import logo from '../assets/logo.svg'
 
 const links = {
   quick: [
@@ -31,7 +32,8 @@ export default function Footer() {
             viewport={{ once: true }}
             className="lg:col-span-1"
           >
-            <Link to="/" className="text-2xl font-bold gradient-text">
+            <Link to="/" className="flex items-center gap-2 text-2xl font-bold gradient-text">
+              <img src={logo} alt="" className="h-8 w-8 shrink-0" aria-hidden />
               Hope Foundation
             </Link>
             <p className="mt-4 text-sm text-slate-400">

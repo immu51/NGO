@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion'
+import logo from '../assets/logo.svg'
 
 export default function LoadingScreen() {
   return (
@@ -15,8 +16,10 @@ export default function LoadingScreen() {
         animate={{ scale: 1, opacity: 1 }}
         transition={{ duration: 0.4 }}
       >
-        <motion.div
-          className="h-16 w-16 rounded-2xl bg-gradient-to-br from-teal-500 to-teal-700"
+        <motion.img
+          src={logo}
+          alt="Hope Foundation"
+          className="h-16 w-16"
           animate={{
             rotate: [0, 5, -5, 0],
             scale: [1, 1.05, 1],
